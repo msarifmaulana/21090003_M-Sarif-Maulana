@@ -1,0 +1,24 @@
+Jawaban No.1
+Algoritma greedy merupakan jenis algoritma yang menggunakan pendekatan penyelesaian masalah dengan mencari nilai maksimum sementara pada setiap langkahnya. Nilai maksimum sementara ini dikenal dengan istilah local maximum.
+Contoh Implementasinya yaitu dalam java adalah
+di bawah ini:
+
+public void greedy(LinkedHashMap<String, Node> nodes) {         
+    ArrayList<Integer> colors = new ArrayList<Integer>();
+    ArrayList<Integer> colorsUsed = new ArrayList<Integer>();
+
+    nodes.entrySet().iterator().next().getValue().currentColor = 1; 
+    colorsUsed.add(1);
+    for (Map.Entry<String,Node> entry : nodes.entrySet()) {
+        for (int i = 0; i < nodes.entrySet().size(); i++) {
+            if(entry.getValue().edges.get(i).currentColor == 0) {
+                //assign a color
+                System.out.println(colors.get(i));
+            }
+        }
+    }
+}
+
+
+
+ini adalah contoh implementasinya dalam bahasa java
